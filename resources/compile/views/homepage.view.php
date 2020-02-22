@@ -1,3 +1,9 @@
+<?php
+if (!\app\classes\User::loggedIn()){
+    global $ULOLE_CONF_ENV;
+    \ulole\core\classes\Response::redirect($ULOLE_CONF_ENV->Auth->returnurl);
+}
+?>
 
 <!doctype html>
 <html lang="en">
