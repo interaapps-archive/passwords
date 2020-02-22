@@ -14,6 +14,9 @@
 
 .password_entry_var {
     padding: 10px;
+    display: inline-table;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .password_entry_var_val {
@@ -25,6 +28,11 @@
 
 .password_password {
     float: right;
+}
+
+.password_icon {
+    width: 16px;
+    margin-right: 5px;
 }
 
 .button {
@@ -49,4 +57,42 @@
 
 #passwords {
     margin-top: 50px;
+}
+
+#alert_preview {
+    width: 222px;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+#forgot_password, #random_password {
+    width: 100%;
+    text-align: right;
+    display: block;
+    color: #4542f4;
+    cursor: pointer;
+}
+
+#snackbar {
+    z-index: 1000000000000000000;
+}
+
+@media screen and (max-width: 720px) {
+    .alert_contents {
+        height: 100%;
+        width: 390px;
+        margin: auto;
+    }
+
+    .alert_alert {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .alert_contents {
+        width: 300px;
+    }
 }
