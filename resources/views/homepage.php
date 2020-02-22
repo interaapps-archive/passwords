@@ -14,6 +14,8 @@ if (!\app\classes\User::loggedIn()){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="manifest" href="https://accounts.interaapps.de/assets/manifest.json">
 
+        <link rel="shortcut icon" type="image/png" href="/icon.svg">
+
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />

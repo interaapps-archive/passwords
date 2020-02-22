@@ -94,6 +94,7 @@ function loadList(){
         const parsed = JSON.parse(response.responseText);
         for (obj in parsed.list) {
             const pw = parsed.list[obj];
+            if (decrypt(pw.name) != "%$test$%")
             $("#passwords").append(
                 $n("div").addClass("password").append(
                     $n("span").addClass("password_name").text(decrypt(pw.name))
