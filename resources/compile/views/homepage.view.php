@@ -1,7 +1,7 @@
 <?php
 if (!\app\classes\User::loggedIn()){
-    global $ULOLE_CONF_ENV;
-    \ulole\core\classes\Response::redirect($ULOLE_CONF_ENV->Auth->returnurl);
+    global $ULOLE_CONFIG_ENV;
+    \ulole\core\classes\Response::redirect($ULOLE_CONFIG_ENV->Auth->returnurl);
 }
 ?>
 
