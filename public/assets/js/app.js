@@ -1,6 +1,6 @@
 let root = "/";
 
-if (chrome != null && typeof chrome.tabs != 'undefined')
+if (typeof chrome != 'undefined' && typeof chrome.tabs != 'undefined')
     root = "https://passwords.interaapps.de/";
 
 let password;
