@@ -162,6 +162,7 @@ function loadList(){
                                     .append(iconInput)
                         ).append($n("a").text("delete this entry").click(function(){
                             Cajax.delete(root+"passwords/"+pw.id+"/remove").then(loadList).send();
+                            pwAlert.close();
                         }))
                     );
 

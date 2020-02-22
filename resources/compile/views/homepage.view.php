@@ -59,9 +59,9 @@ if (!\app\classes\User::loggedIn()){
     
         <div id="behind_sidenav">
         <div id="mySidenav" class="sidenav">
-                        <!-- sidenavselected  -->
-                <a href="https://accounts.interaapps.de" title="Back to Accounts" class="rippleeffect drawerbtn drawerbtn1 sidenava"><i class="small material-icons-outlined sideicon">home</i></a>
-                    </div>
+            <a href="https://accounts.interaapps.de" title="Passwords" class="rippleeffect drawerbtn drawerbtn1 sidenava sidenavselected"><i class="small material-icons-outlined sideicon">vpn_key</i></a>
+            <a href="https://accounts.interaapps.de" title="Back to Accounts" class="rippleeffect drawerbtn drawerbtn1 sidenava"><i class="small material-icons-outlined sideicon">home</i></a>
+        </div>
     </div>
 
 
