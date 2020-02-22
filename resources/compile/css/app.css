@@ -1,0 +1,52 @@
+.password {
+    padding: 20px;
+    transition: 0.3s background;
+}
+
+.password:hover {
+    background: #00000011;
+    cursor: pointer;
+}
+
+.password:focus {
+    background: #00000019;
+}
+
+.password_entry_var {
+    padding: 10px;
+}
+
+.password_entry_var_val {
+    float: right;
+    border: none;
+    text-align: right;
+    font-size: 16px;
+}
+
+.password_password {
+    float: right;
+}
+
+.button {
+    padding: 10px 22px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px 0px #00000033;
+    transition: 0.3s box-shadow;
+    text-align: center;
+    user-select: none;
+    border: none;
+    text-decoration: none;
+    background: #4542f4;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#add_button {
+}
+
+#passwords {
+    margin-top: 50px;
+}

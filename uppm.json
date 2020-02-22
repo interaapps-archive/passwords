@@ -1,0 +1,32 @@
+{
+    "name": "uloleframework",
+    "version": "1.0",
+    "description": "Ulole-Framework is a php framework!",
+    "directory": ".\/",
+    "author": "InteraApps",
+    "keywords": [
+        "Framework",
+        "PHP"
+    ],
+    "modules": {
+        "interaapps\/ulole-orm": ":github"
+    },
+    "namespaces": {},
+    "build": {
+        "main": "cli"
+    },
+    "archive": {
+        "ignore": [
+            ".gitignore",
+            ".idea",
+            ".git",
+            "uppm.locks.json"
+        ]
+    },
+    "serve": {
+        "directory": "public",
+        "routerFile": "index.php",
+        "host": "0.0.0.0",
+        "port": 8000
+    }
+}
