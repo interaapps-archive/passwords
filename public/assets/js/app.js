@@ -1,4 +1,4 @@
-const root = "/";
+const root = "https://passwords.interaapps.de/";
 let password;
 
 function randomString(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
