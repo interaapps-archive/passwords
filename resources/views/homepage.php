@@ -186,6 +186,8 @@ if (!\app\classes\User::loggedIn()){
 
     <div class="contents">
     <a id="add_button" class="button">Add Password</a>
+    <a class="round_button_icon" id="settings_button">settings</a>
+
     <div id="passwords">
         
     </div>

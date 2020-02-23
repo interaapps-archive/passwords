@@ -160,6 +160,39 @@
     z-index: 1000000000000000000;
 }
 
+.alert_title {
+    text-align: center;
+    width: calc(100% - 100px);
+}
+
+.round_button_icon {
+    padding: 6px;
+    border-radius: 40px;
+    font-size: 27px;
+    cursor: pointer;
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.round_button_icon:hover {
+    background: #00000011;
+}
+
+#settings_button {
+    float: right;
+}
+
+.settings_alert_button {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.settings_alert_button:hover {
+    background: #00000011;
+}
+
 @media screen and (max-width: 720px) {
     .alert_contents {
         height: 100%;
