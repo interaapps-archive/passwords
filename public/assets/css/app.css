@@ -193,6 +193,18 @@
     background: #00000011;
 }
 
+#random_password_out {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.alert_contents {
+    overflow-x: auto;
+}
+
 @media screen and (max-width: 720px) {
     .alert_contents {
         height: 100%;

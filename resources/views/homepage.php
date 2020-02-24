@@ -45,7 +45,10 @@ if (!\app\classes\User::loggedIn()){
             <a class="material-icons rippleeffect menubtn">menu</a>
         <a id="logo" href="/"><img id="logoimg" height="40px" src="https://interaapps.de/assets/interaapps/icon/icon2.png"/> <p>Passwords</p></a>
     <div id="navmenu">
-
+        <a id="ia-global-tool-menu">apps</a>
+        <div id="ia-global-tool-menu-dropdown" style="display:none">
+            <iframe src="https://accounts.interaapps.de/api/globalweb/tool" frameborder="0"></iframe>
+        </div>
         <img id="profilepicture" src="<?php echo (htmlspecialchars(\app\classes\User::getUserObject()->profilepic)); ?>" />
     </div>
 </div>

@@ -67,6 +67,67 @@ function changePassword(newPW){
     }).send();
 }
 
+function randomPassword(then=function(pw){}){
+    var pwAlert = new Alert({
+        canexit: true,
+        closebtn: true,
+        title: "New Password"
+    });
+
+    let randomize = function(){
+        $letters = "";
+        
+        if ($("#random_use_letters").getFirstElement().checked)
+            $letters += "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        if ($("#random_use_numbers").getFirstElement().checked)
+            $letters += "1234567890";
+        if ($("#random_use_ascii").getFirstElement().checked)
+            $letters += "&!$/()=[]{}?+*#'~\\ \'";
+        
+
+        $("#random_password_out").text(randomString(Number.parseInt($("#random_password_lenght").val()), $letters));
+
+    };
+
+    pwAlert.addHtml(
+        $n("div").append($n("span").attr("id", "random_password_out"))
+        .append($n("br"))
+        .append($n("span").text("Lenght")).append(
+            $n("input").attr("type", "text").attr("id", "random_password_lenght")
+        )
+        .append($n("br"))
+        .append($n("span").text("Letters")).append(
+            $n("input").attr("id", "random_use_letters").attr("type", "checkbox")
+        )
+        .append($n("br"))
+        .append($n("span").text("Numbers")).append(
+            $n("input").attr("id", "random_use_numbers").attr("type", "checkbox")
+        )
+        .append($n("br"))
+        .append($n("span").text("Ascii")).append(
+            $n("input").attr("id", "random_use_ascii").attr("type", "checkbox")
+        ).html()
+    );
+
+    $("#random_use_letters").change(randomize);
+    $("#random_use_numbers").change(randomize);
+    $("#random_use_ascii").change(randomize);
+    $("#random_password_lenght").keyup(randomize);
+
+    $("#random_password_lenght").val(25);
+    $("#random_use_letters").getFirstElement().checked = true;
+    $("#random_use_numbers").getFirstElement().checked = true;
+    randomize();
+
+    pwAlert.addButton("Use", function() {
+
+    });
+
+    pwAlert.open();
+    
+
+}
+
 
 function newPassword(){
     var pwAlert = new Alert({
@@ -227,7 +288,9 @@ const ready = function(){
         
             masterPassAlert.addHtml('<img id="alert_preview" src="assets/images/safe.svg"><input id="masterpass" type="password" class="flatInput"><a id="random_password">Random password</a><br>Please select a secure password and keep it!<br>If you want to reset your password after that you\'ll lose your password.<br>Write it down or save it into a file.');
             $("#random_password").click(function(){
-                $("#alert_preview").val(randomString(25));
+                randomPassword(function(pw){
+                    console.log(pw);
+                });
             });
             masterPassAlert.addButton("Set Masterpassword", function() {
                 password = $("#masterpass").val();
